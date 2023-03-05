@@ -4,11 +4,9 @@
 # A = 3; B = 5 -> 243 (3**5)
 # A = 2; B = 3 -> 8
 
-def stepeni(a,b):
-    result = 1
-    for i in range(b):
-        result *=a
-    return(result)
-
-a = stepeni(2,3)
-print(a)
+def a_pow_b(a, b):
+    if b == 0:
+        return 1
+    elif b == 1:
+        return a
+    return a * a_pow_b(a, b - 1)
